@@ -1,0 +1,91 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.tlcsdm</groupId>
+    <artifactId>eclipse-dev</artifactId>
+    <version>1.0.0</version>
+    <name>eclipse-dev</name>
+    <packaging>pom</packaging>
+    <description>Eclipse-dev</description>
+    <url>https://www.tlcsdm.com</url>
+
+    <modules>
+        <module>examples</module>
+    </modules>
+
+    <properties>
+        <maven.build.timestamp.format>yyyy-MM-dd</maven.build.timestamp.format>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <maven-compiler-plugin.version>3.11.0</maven-compiler-plugin.version>
+        <maven-surefire-plugin.version>3.1.2</maven-surefire-plugin.version>
+        <junit.version>5.10.0</junit.version>
+    </properties>
+
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>https://www.tlcsdm.com/LICENSE.txt</url>
+        </license>
+    </licenses>
+    <developers>
+        <developer>
+            <name>unknowIfGuestInDream</name>
+            <email>liang.tang.cx@gmail.com</email>
+            <organization>Tlcsdm</organization>
+        </developer>
+    </developers>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-params</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven-compiler-plugin.version}</version>
+                <configuration>
+                    <source>${maven.compiler.source}</source>
+                    <target>${maven.compiler.target}</target>
+                    <encoding>${project.build.sourceEncoding}</encoding>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${maven-surefire-plugin.version}</version>
+                <configuration>
+                    <argLine>-Dfile.encoding=${project.build.sourceEncoding}</argLine>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

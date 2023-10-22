@@ -1,0 +1,22 @@
+demo:
+  - examples/**
+
+test:
+  - '**/test/**'
+
+workflow:
+  - .github/**
+  - .mergify.yml
+
+documentation:
+  - CHANGELOG.md
+  - LICENSE
+  - README.md
+  - docs/**
+
+dependencies:
+  - pom.xml
+  - '**/pom.xml'
+
+i18ns:
+  - any: [ '**/i18n/*.properties' ]
