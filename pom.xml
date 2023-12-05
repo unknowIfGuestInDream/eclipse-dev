@@ -45,7 +45,7 @@
         <org.eclipse.ui.ide.version>3.21.100</org.eclipse.ui.ide.version>
         <org.eclipse.ui.views.version>3.12.100</org.eclipse.ui.views.version>
         <org.eclipse.e4.ui.workbench.version>1.15.100</org.eclipse.e4.ui.workbench.version>
-        <org.eclipse.ui.editors.version>3.17.0</org.eclipse.ui.editors.version>
+        <org.eclipse.ui.editors.version>3.17.100</org.eclipse.ui.editors.version>
         <lwjgl-opengl.version>3.3.3</lwjgl-opengl.version>
         <jogl-all.version>2.3.2</jogl-all.version>
     </properties>
